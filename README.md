@@ -1,6 +1,6 @@
 # Pewlett-Hackard-Analysis
 ## Overview of the analysis
-The purpose of this analysis is to get the table for Retiring Employees by Title, Number of Retireing Employees bt Title and Employees Eligible for the Mentorship Program 
+The purpose of this analysis is to get the table for Retiring Employees by Title, Number of Retiring Employees by Title and Employees Eligible for the Mentorship Program 
 
 ## Results:
 - retirement_titles 
@@ -34,10 +34,6 @@ The purpose of this analysis is to get the table for Retiring Employees by Title
     4737	Human Resources
 
 
-- Baed on the output from SQL, the eligible mentors for each department are 435 in Development, 356 in Production, 272 in Sales, 128 in Customer Service, 126 in Marketing, 113	in Research, 107 in Human Resources, 97 in Quality Management, and 74 in Finance. Mentor amount is way below the new hire amount assuming all the retired posisition will be filled with new hire. Therefore, more mentors are needed to better train new hires.
+- Based on the output from SQL, the eligible mentors for each department are 435 in Development, 356 in Production, 272 in Sales, 128 in Customer Service, 126 in Marketing, 113	in Research, 107 in Human Resources, 97 in Quality Management, and 74 in Finance. Mentor amount is way below the new hire amount assuming all the retired position will be filled with new hire. Therefore, more mentors are needed to better train new hires.
 
 
-
-- How many roles will need to be filled as the "silver tsunami" begins to make an impact\?
-
-- Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
