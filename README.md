@@ -13,6 +13,7 @@ The purpose of this analysis is to get the table for Retiring Employees by Title
 
   Another query is used to retrieve the retiring employees by their most recent job title to avoid dulicated.
   The following code is used to generate the SQL table:
+ .... 
   "SELECT DISTINCT ON (rt.emp_no) rt.emp_no,
 rt.first_name,
 rt.last_name,
