@@ -1,6 +1,7 @@
 # Pewlett-Hackard-Analysis
 ## Overview of the analysis
     The purpose of this analysis is to get the table for Retiring Employees by Title, Number of Retireing Employees bt Title and Employees Eligible for the Mentorship Program 
+
 ## Results:
     - retirement_titles 
     The retiring employees with titles data is obtained by using SQL queries. The data is pulled from employees and joined with titles table.
