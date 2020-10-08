@@ -15,7 +15,7 @@ The purpose of this analysis is to get the table for Retiring Employees by Title
   Another query is used to retrieve the retiring employees by their most recent job title to avoid dulicated.
   Output as below:
   
-  ![](/unique_titles.PNG)
+  ![](/unique_title.PNG)
   
 - retiring_titles
  
