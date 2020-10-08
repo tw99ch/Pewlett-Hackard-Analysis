@@ -58,12 +58,12 @@ ORDER BY ut.emp_no ASC;
 
 
 SELECT COUNT (d.dept_name), d.dept_name
-INTO retiring_dept
+--INTO retiring_dept
 From retiring_dept_no as rd
 INNER JOIN departments as d
 ON (rd.dept_no = d.dept_no)
 GROUP BY d.dept_name
-ORDER BY count DESC;
+ORDER BY d.dept_name ASC;
 
 SELECT COUNT(de.dept_no), de.dept_no
 --INTO mentorship_department
