@@ -6,11 +6,23 @@ The purpose of this analysis is to get the table for Retiring Employees by Title
 - retirement_titles 
 
   The retiring employees with titles data is obtained by using SQL queries. The data is pulled from employees and joined with titles table.
-
+  
+  ![](/retirement_titles.PNG)
+  
 - unique_titles
 
-  Another query is used to retrieve the retiring employees by their most recent job title.
-
+  Another query is used to retrieve the retiring employees by their most recent job title to avoid dulicated.
+  The following code is used to generate the SQL table:
+  "SELECT DISTINCT ON (rt.emp_no) rt.emp_no,
+rt.first_name,
+rt.last_name,
+rt.title
+--INTO unique_titles
+FROM retirement_titles as rt
+ORDER BY rt.emp_no, rt.to_date DESC;"
+  
+  ![](/unique_titles.PNG)
+  
 - retiring_titles
  
   Summarizing the number of retiring employees by titles. 29,414 Senior Engineers, 28,254 Senior Staffs, 14,222 Engineers, 12243 Staffs, 4,502 Technique Leaders, 1,761 Assistant Engineers and 2 Managers will be retiring soon.
