@@ -8,7 +8,7 @@ The purpose of this analysis is to get the table for Retiring Employees by Title
   The retiring employees with titles data is obtained by using SQL queries. The data is pulled from employees and joined with titles table. 
   Output as below:
   
-  ![](/retirement_titles.PNG)
+  ![](/Output/retirement_titles.PNG)
   
 - unique_titles
 
