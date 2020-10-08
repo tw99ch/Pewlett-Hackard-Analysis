@@ -4,7 +4,7 @@ e.last_name,
 ti.title,
 ti.from_date,
 ti.to_date
-INTO retirement_titles
+--INTO retirement_titles
 From employees as e
 INNER JOIN titles as ti
 ON (e.emp_no = ti.emp_no)
@@ -23,7 +23,7 @@ ORDER BY rt.emp_no, rt.to_date DESC;
 
 
 SELECT COUNT (title), title
-INTO retiring_titles
+--INTO retiring_titles
 From unique_titles
 GROUP BY title
 ORDER BY count DESC;
@@ -35,7 +35,7 @@ e.birth_date,
 de.from_date,
 ti.to_date,
 ti.title
-INTO mentorship_eligibilty
+--INTO mentorship_eligibilty
 From employees as e
 INNER JOIN dept_emp as de
 ON (e.emp_no = de.emp_no)
@@ -77,7 +77,7 @@ SELECT md.count, d.dept_name
 From mentorship_department as md
 INNER JOIN departments as d
 ON (md.dept_no = d.dept_no)
-ORDER BY count DESC;
+ORDER BY d.dept_name ASC;
 
 SELECT md.dept_name,
 (rd.count/md.count)mentor_to_new_hire
