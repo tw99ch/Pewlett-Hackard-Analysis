@@ -45,18 +45,44 @@ WHERE (ti.to_date = '9999-01-01')
 And (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY e.emp_no ASC;
 
-SELECT COUNT (de.dept_no), de.dept_no
---INTO retiring_dept
-From unique_titles as ut
-LEFT JOIN dept_emp as de
+SELECT DISTINCT ON (ut.emp_no) ut.emp_no,
+ut.first_name,
+ut.last_name,
+ut.title,
+de.dept_no
+INTO retiring_dept_no
+FROM unique_titles as ut
+INNER JOIN dept_emp as de
 ON (ut.emp_no = de.emp_no)
-GROUP BY de.dept_no
+ORDER BY ut.emp_no ASC;
+
+
+SELECT COUNT (d.dept_name), d.dept_name
+INTO retiring_dept
+From retiring_dept_no as rd
+INNER JOIN departments as d
+ON (rd.dept_no = d.dept_no)
+GROUP BY d.dept_name
 ORDER BY count DESC;
 
+SELECT COUNT(de.dept_no), de.dept_no
+--INTO mentorship_department
+From mentorship_eligibilty as me
+INNER JOIN dept_emp as de
+ON (me.emp_no = de.emp_no)
+GROUP BY de.dept_no;
 
-SELECT rd.count,
-d.dept_name
-INTO retiring_dept2
-From retiring_dept as rd
+SELECT md.count, d.dept_name
+--INTO mentorship_department2
+From mentorship_department as md
 INNER JOIN departments as d
-ON (rd.dept_no = d.dept_no);
+ON (md.dept_no = d.dept_no)
+ORDER BY count DESC;
+
+SELECT md.dept_name,
+(rd.count/md.count)mentor_to_new_hire
+--INTO memtor_no
+From retiring_dept as rd
+INNER JOIN mentorship_department2 as md
+ON (rd.dept_name = md.dept_name);
+
